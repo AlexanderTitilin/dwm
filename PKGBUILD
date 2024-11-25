@@ -27,11 +27,12 @@ sha256sums=('bc36426772e1471d6dd8c8aed91f288e16949e3463a9933fee6390ee0ccd3f81'
             'e7dd151e6f54b256bea35ea6d6767f2563d22b48b106c4ff0c65813a38bef3d9'
             '5bacf3ee1e434ace02b4ad7bb47c6cdcb425b7c24cea5867f9ea3119a3323d04'
             'd78711587e6d554de5dc47adca00fc1eb6c8f8ca11c9e75411da8da60eae7abe'
-            'f8171252620215a5f07cd1833ae40561a931d039fe336eefb1dd9ce87b99d149')
+            'a3eabfa1cfe350fe638e5c8e04e72a16ba5618d0372f96ee1e1d7a3974547399')
 
 prepare() {
   cd "$srcdir/$pkgname-$pkgver"
 
+  patch -p1 -i "$srcdir/dwm-fibonacci-20200418-c82db69.diff"
   patch -p1 -i "$srcdir/dwm-autostart-20210120-cb3f58a.diff"
   patch -p1 -i "$srcdir/dwm-keychord-6.4.diff"
   patch -p1 -i "$srcdir/dwm-attachaside-6.4.diff"
